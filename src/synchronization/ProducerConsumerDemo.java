@@ -30,8 +30,8 @@ public class ProducerConsumerDemo {
 }
 
 class Worker {
-    private int size;
-    private Queue<Integer> queue;
+    private final int size;
+    private final Queue<Integer> queue;
     private static final Object LOCK = new Object();
     private int counter;
 
