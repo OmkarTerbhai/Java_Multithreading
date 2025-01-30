@@ -15,6 +15,8 @@ public class CyclicBarrierDemo {
         for (int i = 1; i <= TOURISTS; i++) {
             new Thread(new Tourist(i, barrier)).start();
         }
+
+        barrier.reset();
     }
 
     static class Tourist implements Runnable{

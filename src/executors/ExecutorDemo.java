@@ -8,13 +8,13 @@ public class ExecutorDemo {
 
         Worker1 w1 = new Worker1();
         Worker2 w2 = new Worker2();
-        try(ExecutorService service = Executors.newSingleThreadExecutor()) {
+        ExecutorService service = Executors.newSingleThreadExecutor();
             for(int i = 1; i <= 100; i++) {
                 service.execute(w1);
                 service.execute(w2);
             }
 
-        }
+        service.shutdown();
     }
 }
 

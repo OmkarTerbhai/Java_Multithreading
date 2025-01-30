@@ -20,23 +20,25 @@ public class ReentrantLockDemo {
 
     public static void increment() {
         lock.lock();
-
+        System.out.println("Lock acquired by increment");
         try {
             shared++;
         }
         finally {
             lock.unlock();
+            System.out.println("Lock released by increment");
         }
     }
 
     public static void decrement() {
         lock.lock();
-
+        System.out.println("Lock acquired by decrement");
         try {
             shared--;
         }
         finally {
             lock.unlock();
+            System.out.println("Lock released by decrement");
         }
     }
 

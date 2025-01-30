@@ -42,14 +42,14 @@ class Two implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("Sending value " + 20);
-        try {
-            Thread.sleep(2000);
-            String recvd = exchanger.exchange("20");
-
-            System.out.println("Received " + recvd + " in Two");
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+//        System.out.println("Sending value " + 20);
+//        try {
+//            Thread.sleep(2000);
+//            String recvd = exchanger.exchange("20");
+//
+//            System.out.println("Received " + recvd + " in Two");
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
     }
 }
